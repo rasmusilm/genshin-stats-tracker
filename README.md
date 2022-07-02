@@ -34,7 +34,7 @@ Main use for me is to see the running state of the account:
 - Teapot coins
 - Whether dailies are done
 
-And do daily check-in and redeem any new giftcodes without having to think about it (giftcode redemption temporarily broken due to hoyoverse api changes)
+And do daily check-in and redeem any new giftcodes without having to think about it.
 
 I plan to also add an entry for your parametric transformer
 
