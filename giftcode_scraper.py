@@ -74,7 +74,7 @@ def redeem_code(code: str, uid: int, account_id: str, cookie_token: str):
     """
         Attempts to redeem the giftcode for a given account
     """
-    url = f"https://hk4e-api-os.mihoyo.com/common/apicdkey/api/webExchangeCdkey?uid={uid}&region={recognize_server(uid)}&lang=en&cdkey={code}&game_biz=hk4e_global"
+    url = f"https://sg-hk4e-api.mihoyo.com/common/apicdkey/api/webExchangeCdkey?uid={uid}&region={recognize_server(uid)}&lang=en&cdkey={code}&game_biz=hk4e_global"
     payload = {}
     headers = {
         'Host': 'hk4e-api-os.mihoyo.com',
