@@ -71,10 +71,7 @@ def find_from_possible_codes(possible_codes):
 
 
 def redeem_code(code: str, uid: int, account_id: str, cookie_token: str):
-    """
-        Attempts to redeem the giftcode for a given account
-    """
-    url = f"https://sg-hk4e-api.mihoyo.com/common/apicdkey/api/webExchangeCdkey?uid={uid}&region={recognize_server(uid)}&lang=en&cdkey={code}&game_biz=hk4e_global"
+    url = f"https://sg-hk4e-api.mihoyo.com/common/apicdkey/api/webExchangeCdkey?uid={uid}&region=os_euro&lang=en&cdkey={code}&game_biz=hk4e_global"
     payload = {}
     headers = {
         'Host': 'hk4e-api-os.mihoyo.com',
@@ -92,7 +89,7 @@ def redeem_code(code: str, uid: int, account_id: str, cookie_token: str):
         'Referer': 'https://genshin.mihoyo.com/',
         'Accept-Encoding': 'gzip, deflate, br',
         'Accept-Language': 'en,et;q=0.9,en-GB;q=0.8,en-US;q=0.7',
-        'Cookie': f'_MHYUUID=f0043c50-a83a-49d6-9a5a-44e923552eeb; _ga_FZJK05VBBV=GS1.1.1635541647.1.1.1635541723.0; _ga_6ZT27XS0C9=GS1.1.1636234567.4.1.1636235665.0; UM_distinctid=17d0188a1f070b-0f334ca4e05565-561a1053-144000-17d0188a1f1a53; mi18nLang=en-us; _ga_88EC1VG6YY=GS1.1.1637539484.5.0.1637539484.0; _ga_54PBK3QDF4=GS1.1.1643727725.2.0.1643727732.0; _ga_E6T63X3GHE=GS1.1.1643922928.3.1.1643923045.0; _gaexp=GAX1.2.RCLud6nhTGOoinjzVuh60g.19105.0; _gcl_au=1.1.1661134152.1644069785; _gcl_aw=GCL.1644069785.Cj0KCQiA3fiPBhCCARIsAFQ8QzXTLuyYuXl1PATyoN3JebXUOqRigHFGN32wLspZg868hLzwJ4vPqTQaAn61EALw_wcB; _gid=GA1.2.1722650338.1650298649; _gac_UA-115635327-41=1.1644069785.Cj0KCQiA3fiPBhCCARIsAFQ8QzXTLuyYuXl1PATyoN3JebXUOqRigHFGN32wLspZg868hLzwJ4vPqTQaAn61EALw_wcB; _ga=GA1.2.363187715.1647694296; _ga_B9G6ZV6QNR=GS1.1.1644070952.11.1.1644071264.0; cookie_token={cookie_token}; account_id={account_id};'
+        'Cookie': f'_MHYUUID=cac753d0-06f1-474f-873f-67bffd1cae51; _ga_FZJK05VBBV=GS1.1.1635541647.1.1.1635541723.0; _ga_6ZT27XS0C9=GS1.1.1636234567.4.1.1636235665.0; UM_distinctid=17d0188a1f070b-0f334ca4e05565-561a1053-144000-17d0188a1f1a53; mi18nLang=en-us; _ga_88EC1VG6YY=GS1.1.1637539484.5.0.1637539484.0; _ga_54PBK3QDF4=GS1.1.1643727725.2.0.1643727732.0; _ga_E6T63X3GHE=GS1.1.1643922928.3.1.1643923045.0; _gaexp=GAX1.2.RCLud6nhTGOoinjzVuh60g.19105.0; _gcl_au=1.1.1661134152.1644069785; _gcl_aw=GCL.1644069785.Cj0KCQiA3fiPBhCCARIsAFQ8QzXTLuyYuXl1PATyoN3JebXUOqRigHFGN32wLspZg868hLzwJ4vPqTQaAn61EALw_wcB; _gid=GA1.2.1930718610.1644069785; _gac_UA-115635327-41=1.1644069785.Cj0KCQiA3fiPBhCCARIsAFQ8QzXTLuyYuXl1PATyoN3JebXUOqRigHFGN32wLspZg868hLzwJ4vPqTQaAn61EALw_wcB; _ga=GA1.2.206046817.1635541647; _ga_B9G6ZV6QNR=GS1.1.1644070952.11.1.1644071264.0; cookie_token_v2={cookie_token}; account_id_v2={account_id};'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)

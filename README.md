@@ -56,7 +56,7 @@ You will need to put YOUR OWN account credentials into the accounts file into th
   - Login to your account
   - press F12 to open inspect mode (aka Developer Tools)
   - go to Application, Cookies, https://genshin.hoyoverse.com
-  - copy cookie_token
+  - copy cookie_token_v2
   - put it into the account constructor for the last value
 
-Sometimes the code redemption page also has your UID among the cookies as account_id
+Sometimes the code redemption page also has your UID among the cookies as account_id_v2
